@@ -1,22 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  animation: fadeIn 1s ease-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  background: #f0f0f0;
+}
+
+h1,
+h2 {
+  color: #007acc;
+  animation: slideIn 0.5s ease-out;
 }
 
 h1 {
-  text-align: center;
-  font-size: 24px;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-p {
-  margin-bottom: 10px;
+.section {
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  background: #007acc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  animation: bounceIn 1s ease;
+}
+
+.toggle-button:hover {
+  background: #005f99;
+}
+
+.hidden {
+  display: none;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 20px;
+  animation: fadeInUp 0.5s ease-out;
 }
 
-li {
-  margin-bottom: 5px;
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007acc;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
