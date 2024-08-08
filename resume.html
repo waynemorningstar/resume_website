@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duvvada Sumanth - Resume</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f9;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        animation: fadeIn 1s ease-out;
+      }
+      .container:hover {
+        transform: scale(1.02);
+        background: #f0f0f0;
+      }
+      h1,
+      h2 {
+        color: #007acc;
+        animation: slideIn 0.5s ease-out;
+      }
+      h1 {
+        border-bottom: 2px solid #007acc;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .toggle-button {
+        background: #007acc;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background 0.3s ease;
+        animation: bounceIn 1s ease;
+      }
+      .toggle-button:hover {
+        background: #005f99;
+      }
+      .hidden {
+        display: none;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+        animation: fadeInUp 0.5s ease-out;
+      }
+      ul li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #007acc;
+        animation: pulse 1s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      .contact-info,
+      .career-objective,
+      .qualification,
+      .internships,
+      .certifications,
+      .activities,
+      .skills,
+      .personal-details {
+        padding: 15px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        margin-bottom: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .contact-info:hover,
+      .career-objective:hover,
+      .qualification:hover,
+      .internships:hover,
+      .certifications:hover,
+      .activities:hover,
+      .skills:hover,
+      .personal-details:hover {
+        background-color: #e9e9e9;
+      }
+      .internship-details {
+        margin-left: 20px;
+        padding: 10px;
+        border-left: 3px solid #007acc;
+        animation: slideIn 0.5s ease-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes bounceIn {
+        0%,
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        0% {
+          opacity: 0;
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+        20% {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+          transform: scale3d(0.9, 0.9, 0.9);
+        }
+        60% {
+          opacity: 1;
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+          transform: scale3d(0.97, 0.97, 0.97);
+        }
+        100% {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Duvvada Sumanth</h1>
+      <div class="contact-info section">
+        <p>
+          Survey No. 156/157, IFHE-IBS Campus, Donthanapally, Shankarapalli
+          Road, Hyderabad, Telangana 501203
+        </p>
+        <p>
+          <a
+            href="mailto:duvvada.sumanth23h@ibsindia.org"
+            style="color: #007acc"
+            >duvvada.sumanth23h@ibsindia.org</a
+          >
+        </p>
+        <p><a href="tel:+918332075670" style="color: #007acc">8332075670</a></p>
+      </div>
+
+      <h2 class="section">Career Objective</h2>
+      <div class="career-objective">
+        <p>
+          Seeking a challenging and rewarding position in an organization, where
+          I can utilize my skills and knowledge to contribute to the success and
+          growth of the organization, while continuously enhancing my
+          professional development.
+        </p>
+      </div>
+
+      <h2 class="section">Qualification</h2>
+      <div class="qualification">
+        <ul>
+          <li>MBA, ICFAI, Hyderabad (2023-2025), CGPA: 6.14</li>
+          <li>BSc (MPC), JNTU K, Andhra Pradesh (2019-2022), CGPA: 7.00</li>
+          <li>
+            BTech, Mechanical, Andhra University, Andhra Pradesh (2017-2019) -
+            Incomplete
+          </li>
+          <li>
+            Higher Secondary, Board of Intermediate Education (2015-2017), 77.2%
+          </li>
+          <li>10th, Board of Secondary Education (2014-2015), CGPA: 8.00</li>
+        </ul>
+      </div>
+
+      <h2 class="section">Internship/Workshop Program</h2>
+      <div class="internships">
+        <ul>
+          <li>
+            <strong
+              >Visakhapatnam Port Authority in Ratio Analysis (March 23 - May
+              23)</strong
+            >
+            <button
+              class="toggle-button"
+              onclick="toggleSection('internship1')"
+            >
+              Show Details
+            </button>
+            <div id="internship1" class="internship-details hidden">
+              <ul>
+                <li>Sorted and organized files, spreadsheets, and reports.</li>
+                <li>
+                  Prepared project presentations and reports to assist senior
+                  staff.
+                </li>
+                <li>
+                  Developed organizational skills through managing multiple
+                  tasks simultaneously while adhering to strict deadlines.
+                </li>
+              </ul>
+              <button
+                class="toggle-button"
+                onclick="toggleSection('internship1')"
+              >
+                Show Less
+              </button>
+            </div>
+          </li>
+          <li>
+            <strong
+              >Coromandel International Limited, Working Capital Management (Feb
+              24 - May 24)</strong
+            >
+            <button
+              class="toggle-button"
+              onclick="toggleSection('internship2')"
+            >
+              Show Details
+            </button>
+            <div id="internship2" class="internship-details hidden">
+              <ul>
+                <li>
+                  Analyzed problems and worked with teams to develop solutions.
+                </li>
+                <li>
+                  Contributed to a positive team environment by collaborating
+                  with fellow interns on group projects and presentations.
+                </li>
+                <li>
+                  Gained hands-on experience in working capital management,
+                  learning to develop strategies to optimize cash flow and
+                  reduce costs.
+                </li>
+              </ul>
+              <button
+                class="toggle-button"
+                onclick="toggleSection('internship2')"
+              >
+                Show Less
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="section">Certifications</h2>
+      <div class="certifications">
+        <ul>
+          <li>SEBI Investor Certification Examination</li>
+        </ul>
+      </div>
+
+      <h2 class="section">Extra-Curricular Activities</h2>
+      <div class="activities">
+        <ul>
+          <li>
+            Event coordinator of cultural activities, demonstrating leadership
+            skills in organizing and managing events.
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="section">Skills</h2>
+      <div class="skills">
+        <ul>
+          <li>Proficiency in MS Office</li>
+          <li>Strong communication skills</li>
+          <li>Excellent problem-solving abilities</li>
+        </ul>
+      </div>
+
+      <h2 class="section">Personal Details</h2>
+      <div class="personal-details">
+        <ul>
+          <li>Father's Name: Mr. Appa Rao Duvvada</li>
+          <li>Date of Birth: 29/10/1999</li>
+          <li>Languages Known: Telugu, Hindi, English</li>
+          <li>Hobbies: Drawing, Watching cricket, Listening to music</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(id) {
+        var section = document.getElementById(id);
+        if (section.classList.contains("hidden")) {
+          section.classList.remove("hidden");
+        } else {
+          section.classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
