@@ -15,36 +15,6 @@
         padding: 0;
         overflow-x: hidden;
       }
-      
-
-      /* Navigation Bar */
-      nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        background-color: #007acc;
-        padding: 10px 0;
-        margin: 0;
-      }
-      nav ul li {
-        margin: 0;
-      }
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      nav ul li a:hover {
-        background-color: #005f99;
-      }
-
-      /* Smooth Scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-
       .container {
         max-width: 800px;
         margin: 30px auto;
@@ -72,7 +42,6 @@
       .section {
         margin-bottom: 20px;
       }
-
       .toggle-button {
         background: #007acc;
         color: #ffffff;
@@ -117,7 +86,6 @@
           transform: scale(1.2);
         }
       }
-
       .contact-info,
       .career-objective,
       .qualification,
@@ -206,110 +174,9 @@
           transform: scale3d(1, 1, 1);
         }
       }
-
-      /* Sticky Sidebar */
-      .sidebar {
-        position: fixed;
-        top: 10%;
-        right: 0;
-        width: 200px;
-        background-color: #007acc;
-        padding: 10px;
-        border-radius: 10px 0 0 10px;
-        text-align: center;
-      }
-      .sidebar a {
-        display: block;
-        color: #ffffff;
-        margin-bottom: 10px;
-        text-decoration: none;
-        padding: 10px 0;
-        transition: background-color 0.3s ease;
-      }
-      .sidebar a:hover {
-        background-color: #005f99;
-      }
-
-      /* Skills Progress Bar */
-      .progress-bar {
-        position: relative;
-        height: 10px;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-        overflow: hidden;
-        margin-top: 5px;
-      }
-      .progress-bar::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0;
-        background-color: #007acc;
-        border-radius: 5px;
-        transition: width 1s ease;
-      }
-
-      /* Theme Switcher */
-      .theme-switcher {
-        text-align: center;
-        margin-top: 20px;
-      }
-      .dark-theme {
-        background-color: #333333;
-        color: #ffffff;
-      }
-      .dark-theme .container {
-        background-color: #444444;
-      }
-
-      /* Back to Top Button */
-      #topBtn {
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #007acc;
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-      #topBtn:hover {
-        background-color: #005f99;
-      }
     </style>
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <ul>
-        <li><a href="#contact-info">Contact Info</a></li>
-        <li><a href="#career-objective">Career Objective</a></li>
-        <li><a href="#qualification">Qualification</a></li>
-        <li><a href="#internships">Internships</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#activities">Extra-Curricular</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#personal-details">Personal Details</a></li>
-      </ul>
-    </nav>
-
-    <!-- Sticky Sidebar -->
-    <div class="sidebar">
-      <a href="#contact-info">Contact Info</a>
-      <a href="#career-objective">Career Objective</a>
-      <a href="#qualification">Qualification</a>
-      <a href="#internships">Internships</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#activities">Extra-Curricular</a>
-      <a href="#skills">Skills</a>
-      <a href="#personal-details">Personal Details</a>
-    </div>
-
     <div class="container">
       <h1>Duvvada Sumanth</h1>
       <div class="contact-info section">
@@ -427,7 +294,7 @@
       <h2 class="section">Certifications</h2>
       <div class="certifications">
         <ul>
-          <li>SEBI Investor Certification Examination</li>
+          <li>NISM: SEBI Investor Certification Examination</li>
           <li>Python</li>
           <li>C Language</li>
           <li>SQL</li>
@@ -446,6 +313,12 @@
             Event coordinator of cultural activities, demonstrating leadership
             skills in organizing and managing events.
           </li>
+          <li>Donated blood in various notable clubs like rotary club.</li>
+          <li>
+            Volunteered at Big Scout event held in Visakhapatnam on march 2019 (
+            street ending homelessness)
+          </li>
+          <li>Coordinator of IBS Messenger</li>
         </ul>
       </div>
 
@@ -462,207 +335,11 @@
       <div class="personal-details">
         <ul>
           <li>Father's Name: Mr. Sundara Rao Duvvada</li>
-          <li>Date of Birth: 27/10/1999</li>
+          <li>Date of Birth: 27/08/1999</li>
           <li>Languages Known: Telugu, Hindi, English</li>
-          <li>Hobbies: Drawing, Watching cricket, Listening to music</li>
+          <li>Hobbies: Drawing, Watching Movies, Listening to music</li>
         </ul>
       </div>
-
-      <!-- Theme Switcher -->
-      <div class="theme-switcher">
-        <button onclick="toggleTheme()">Toggle Theme</button>
-      </div>
-
-    </div>
-
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()" id="topBtn" title="Go to top">Top</button>
-
-    <script>
-      // Skills Progress Bar Animation
-      window.onload = function () {
-        var progressBars = document.querySelectorAll(".progress-bar");
-        progressBars.forEach(function (bar) {
-          bar.style.width = bar.getAttribute("data-progress");
-        });
-      };
-
-      // Theme Switcher
-      function toggleTheme() {
-        document.body.classList.toggle("dark-theme");
-      }
-
-      // Scroll to Top Function
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
-  </body>
-</html>
-
-      .container {
-        max-width: 800px;
-        margin: 30px auto;
-        background: #ffffff;
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-        animation: fadeIn 1s ease-out;
-      }
-      .container:hover {
-        transform: scale(1.02);
-        background: #f0f0f0;
-      }
-      h1,
-      h2 {
-        color: #007acc;
-        animation: slideIn 0.5s ease-out;
-      }
-      h1 {
-        border-bottom: 2px solid #007acc;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-      }
-      .section {
-        margin-bottom: 20px;
-      }
-      .toggle-button {
-        background: #007acc;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-        transition: background 0.3s ease;
-        animation: bounceIn 1s ease;
-      }
-      .toggle-button:hover {
-        background: #005f99;
-      }
-      .hidden {
-        display: none;
-      }
-      ul {
-        list-style-type: none;
-        padding-left: 20px;
-        animation: fadeInUp 0.5s ease-out;
-      }
-      ul li {
-        position: relative;
-        padding-left: 20px;
-        margin-bottom: 10px;
-        line-height: 1.5;
-      }
-      ul li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #007acc;
-        animation: pulse 1s infinite;
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-      }
-      .contact-info,
-      .career-objective,
-      .qualification,
-      .internships,
-      .certifications,
-      .activities,
-      .skills,
-      .personal-details {
-        padding: 15px;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        margin-bottom: 15px;
-        transition: background-color 0.3s ease;
-      }
-      .contact-info:hover,
-      .career-objective:hover,
-      .qualification:hover,
-      .internships:hover,
-      .certifications:hover,
-      .activities:hover,
-      .skills:hover,
-      .personal-details:hover {
-        background-color: #e9e9e9;
-      }
-      .internship-details {
-        margin-left: 20px;
-        padding: 10px;
-        border-left: 3px solid #007acc;
-        animation: slideIn 0.5s ease-out;
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      @keyframes slideIn {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(0);
-        }
-      }
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes bounceIn {
-        0%,
-        20%,
-        40%,
-        60%,
-        80%,
-        100% {
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        0% {
-          opacity: 0;
-          transform: scale3d(0.3, 0.3, 0.3);
-        }
-        20% {
-          transform: scale3d(1.1, 1.1, 1.1);
-        }
-        40% {
-          transform: scale3d(0.9, 0.9, 0.9);
-        }
-        60% {
-          opacity: 1;
-          transform: scale3d(1.03, 1.03, 1.03);
-        }
-        80% {
-          transform: scale3d(0.97, 0.97, 0.97);
-        }
-        100% {
-          opacity: 1;
-          transform: scale3d(1, 1, 1);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    
     </div>
 
     <script>
@@ -677,3 +354,4 @@
     </script>
   </body>
 </html>
+
